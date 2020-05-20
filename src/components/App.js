@@ -1,36 +1,30 @@
 import React from 'react';
 import { Layout } from 'antd';
 import Login from "./user/login";
+import { BrowserRouter,Route,Link } from 'react-router-dom';
+import Register from './user/user-register';
 
 const { Header, Footer, Sider, Content } = Layout;
 function App() {
 
  
   return (
-    <div >
+    <BrowserRouter>
       <Layout>
       <Sider>Sider</Sider>
       <Layout>
         <Header>Header</Header>
         <Content>
-          <Layout>
-            {/*登录注册模块*/ }
-            <Sider  width="300px">
-              <Login/>
-            </Sider>
-            {/*右侧走马灯 */}
-            <Layout>
-              <Content>
-              </Content>
-            </Layout>
-            
-          </Layout>
+            <Link to="/login/lg" exact>login</Link>
+            <Route path="/login/:name" component={Login} />
+            <Route path="/register" exact component={Register} />
         </Content>
         <Footer>Footer</Footer>
       </Layout>
-      <Sider>\</Sider>
+      <Sider></Sider>
     </Layout>
-    </div>
+
+    </BrowserRouter>
   );
 }
 
