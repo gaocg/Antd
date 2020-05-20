@@ -18,6 +18,7 @@ import React from 'react';
 
     }
     handleClick(type){
+        this.props.history.push('/')
         this.setState({"type":type});
     }
     render(){

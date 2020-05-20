@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
+import Login from './components/user/login';
+import { BrowserRouter,Route,Router } from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
+<BrowserRouter >
+<Route path="/" exact component={App}/>
+<Route path="/repos" component={Login} />
 
-    <App />
+</BrowserRouter>
+  
 ,
   document.getElementById('root')
 );
