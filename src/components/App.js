@@ -10,19 +10,20 @@ function App() {
  
   return (
     <BrowserRouter>
-      <Layout>
+    <Route path="/login/:name" component={Login} />
+      {/* <Layout>
       <Sider>Sider</Sider>
       <Layout>
         <Header>Header</Header>
         <Content>
             <Link to="/login/lg" exact>login</Link>
-            <Route path="/login/:name" component={Login} />
+            
             <Route path="/register" exact component={Register} />
         </Content>
         <Footer>Footer</Footer>
       </Layout>
-      <Sider></Sider>
-    </Layout>
+      <Sider>right</Sider>
+    </Layout> */}
 
     </BrowserRouter>
   );
