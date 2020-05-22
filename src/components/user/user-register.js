@@ -40,7 +40,7 @@ class Register extends React.Component{
                         <Form.Item label="密码" name="password" rules={[{required:true,message:"密码!"}]} hasFeedback>
                             <Input.Password size="middle" placeholder="密码"/>
                         </Form.Item>
-                        <Form.Item label="确认密码" name="confirm" dependencies={['password']} rules={[{required:true,message:"密码!"},
+                        <Form.Item label="确认密码"  name="confirm" dependencies={['password']} rules={[{required:true,message:"密码!"},
                                 ({ getFieldValue }) => ({
                                     validator(rule, value) {
                                     if (!value || getFieldValue('password') === value) {

@@ -11,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
     <Route path="/login/:name" component={Login} />
+    <Route path="/register" component={Register} />
       {/* <Layout>
       <Sider>Sider</Sider>
       <Layout>
