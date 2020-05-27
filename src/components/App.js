@@ -3,6 +3,7 @@ import { Layout } from 'antd';
 import Login from "./user/login";
 import { BrowserRouter,Route,Link } from 'react-router-dom';
 import Register from './user/user-register';
+import Upfile from "./multiplexing/Upfile/Upfile";
 
 const { Header, Footer, Sider, Content } = Layout;
 function App() {
@@ -11,21 +12,20 @@ function App() {
   return (
     <BrowserRouter>
     <Route path="/login/:name" component={Login} />
-    <Route path="/register" component={Register} />
-      {/* <Layout>
+    <Route path="/" >
+    <Layout>
       <Sider>Sider</Sider>
-      <Layout>
-        <Header>Header</Header>
-        <Content>
-            <Link to="/login/lg" exact>login</Link>
-            
-            <Route path="/register" exact component={Register} />
-        </Content>
-        <Footer>Footer</Footer>
-      </Layout>
+        <Layout>
+          <Header>Header</Header>
+          <Content>
+              <Route path="/Upfile" exact component={Upfile} />
+              <Route path="/register" exact component={Register} />
+          </Content>
+          <Footer>Footer</Footer>
+        </Layout>
       <Sider>right</Sider>
-    </Layout> */}
-
+    </Layout>
+    </Route>
     </BrowserRouter>
   );
 }
