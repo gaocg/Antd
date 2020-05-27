@@ -26,7 +26,10 @@ class Register extends React.Component{
     render(){
         const config = {
             type:"headPic",
-            
+            className : "gcg-circle",
+            crop:true,
+            rotate:true,
+            style:{width:100,height:100}
         };
         const selectArea = (
             <Form.Item name="prefix" noStyle>
@@ -78,7 +81,7 @@ class Register extends React.Component{
                         
                     </Form>
                 </Col>
-                <Col span={4}><div ><Upfile config={config}/></div></Col>
+                <Col span={4}><Upfile  config={config}/></Col>
                 <Col xs={0} sm={1} md={2} lg={3} xl={4} xxl={5}  >
                 </Col>
             </Row>

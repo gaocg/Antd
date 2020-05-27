@@ -1,5 +1,5 @@
 @import '~antd/dist/antd.css';
-@import "./css/base.sass";
+@import "./css/base.scss";
 @import "./css/App.css";
 body {
   margin: 0;

@@ -8,7 +8,7 @@
 */
 import React from 'react';
 import UpheadPic from "./Up-head-pic";
-
+import "./Upfile.scss";
 export default class Upfile extends React.Component{
   constructor(props){
     super(props);
@@ -31,7 +31,7 @@ export default class Upfile extends React.Component{
     }
 
     return (
-        <Upload config={config}/>
+        <Upload  config={config}/>
     )
   }
 }
