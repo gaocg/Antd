@@ -14,3 +14,4 @@ addonBefore,addonAfter:Input 前置，后置标签，可以放入其他reactNode
 
 initialValues : Form表单预设值,传入对象,所以是双大括号
 
+antd-img-crop:图片裁剪插件, rotate 参数 提供图片旋转功能
