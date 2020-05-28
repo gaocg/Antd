@@ -1,10 +1,8 @@
 
-.ant-upload.ant-upload-select-picture-card > .ant-upload{padding:0;display: flex;justify-content: center;align-items: center;}
-.ant-upload-picture-card-wrapper{height:100%}
-.ant-upload.ant-upload-select-picture-card{width:100%;height:100%;display:block}
-img{width:100%;height:inherit}
-.gcg-circle .ant-upload{
-    overflow:hidden;
-    border-radius:100%;
-    
-}
+/*headpic*/
+.gcg-circle .ant-upload.ant-upload-select-picture-card > .ant-upload{padding:0;display: flex;justify-content: center;align-items: center;}
+.gcg-circle .ant-upload-picture-card-wrapper{height:100%;}
+.gcg-circle .ant-upload.ant-upload-select-picture-card{width:100%;height:100%;display:block}
+.gcg-circle img{width:100%;height:inherit}
+.gcg-circle .ant-upload{overflow:hidden;border-radius:100%;}
+

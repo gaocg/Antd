@@ -17,12 +17,12 @@ class Register extends React.Component{
         this.state = {
             config : {
                 type:"piclist",
-                action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+                //action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
                 className : "",
                 crop:true,
                 fileList:"",
                 rotate:true,
-                style:{width:100,height:100},
+                
                 //onChange:(f)=>this.finish(f)
             }
         }
