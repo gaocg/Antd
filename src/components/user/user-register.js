@@ -3,8 +3,8 @@ import React from 'react';
 import { Form, Input, Button, Checkbox,Row,Col, Tooltip,
     Select, InputNumber,Upload
  } from 'antd';
- import ImgCrop from "antd-img-crop";
- import Upfile from "../multiplexing/Upfile/Upfile";
+
+import Upfile from "../multiplexing/Upfile/Upfile";
 import {QuestionCircleOutlined,LoadingOutlined,PlusOutlined } from "@ant-design/icons";
 const layout = {
     labelCol: { span: 6 },
@@ -15,22 +15,26 @@ class Register extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-          
-        };
-
+            config : {
+                type:"piclist",
+                action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+                className : "",
+                crop:true,
+                fileList:"",
+                rotate:true,
+                style:{width:100,height:100},
+                //onChange:(f)=>this.finish(f)
+            }
+        }
     }
     finish(v){
+        this.setState({
+            config:{...this.state.config,fileList:v.fileList}
+        })
         console.log(v);
     }
 
     render(){
-        const config = {
-            type:"headPic",
-            className : "gcg-circle",
-            crop:true,
-            rotate:true,
-            style:{width:100,height:100}
-        };
         const selectArea = (
             <Form.Item name="prefix" noStyle>
                 <Select style={{width:70}}>
@@ -73,7 +77,7 @@ class Register extends React.Component{
                             <Input addonBefore={selectArea} style={{ width: '100%',}} maxLength="11"/>
                         </Form.Item>
                         <Form.Item name={"age"} label="Age" min={1} max={10} rules={[{type:'number',min:0,max:99},{required:true,message:"InputNumber"}]}>
-                                <InputNumber />
+                            <InputNumber />
                         </Form.Item>
                         <Form.Item style={{textAlign:"center"}}>
                             <Button type="primary" htmlType="submit">提交</Button>
@@ -81,7 +85,7 @@ class Register extends React.Component{
                         
                     </Form>
                 </Col>
-                <Col span={4}><Upfile  config={config}/></Col>
+                <Col span={4}><div style={{width:300}}><Upfile config={this.state.config}/></div></Col>
                 <Col xs={0} sm={1} md={2} lg={3} xl={4} xxl={5}  >
                 </Col>
             </Row>

@@ -12,7 +12,7 @@ export default class Upheadpic extends React.Component{
         }
         this.onchange = this.onchange.bind(this);
     }
-    onchange(file){
+    onChange(file){
         this.setState({
           "load"  : 1
         });
@@ -38,7 +38,7 @@ export default class Upheadpic extends React.Component{
             data            :   this.props.config.data,                 //上传功能需要的额外参数         
             listType        :   this.props.config.listType || "picture-card",
             showUploadList  :   this.props.config.showUploadList || false,
-            onChange        :   this.props.config.onChange || this.onchange,
+            onChange        :   this.props.config.onChange || this.onChange,
             className       :   this.props.config.className,            //gcg-circle 代表圆形                   //自定义class
             rotate          :   this.props.config.rotate,               //是否有旋转功能
             style           :   this.props.config.style                 //自定义样式       
