@@ -3,7 +3,7 @@
 */
 import React from "react"; 
 import {Upload} from "antd";
-import {LoadingOutlined,PlusOutlined, ConsoleSqlOutlined } from "@ant-design/icons";
+import {LoadingOutlined,PlusOutlined, ConsoleSqlOutlined, PropertySafetyFilled } from "@ant-design/icons";
 
 
 export default class Uppiclist extends React.Component{
@@ -26,7 +26,7 @@ export default class Uppiclist extends React.Component{
                 listType                :   this.props.config.listType || "picture-card",
                 multiple                :   false,                                                          //是否支持多选文件
                 name                    :   "file",                                                         //发到后台的文件参数名
-                previewFile             :   undefined,                                                      //自定义预览
+                //previewFile             :   '',                                                      //自定义预览
                 //isImageUrl            :   true,                                                           //自定义缩略图是否使用 <img /> 标签进行显示
                 showUploadList          :   this.props.config.showUploadList || true,                       //是否展示文件列表
                 withCredentials         :   false,                                                           //上传请求时是否携带 cookie
@@ -51,13 +51,22 @@ export default class Uppiclist extends React.Component{
         })
     }
     beforeUpload(file){
+        return new Promise((resolve,reject)=>{
+            if(file.size/1024 > 2){
+                console.log("文件不能大于2M");
+                reject(file);
+
+            }else{   
+                resolve(file);
+            }
+            
+        });
+        
+    }
+    onChange(file){
         this.setState({
             load:false
         });
-        
-        return true;
-    }
-    onChange(file){
         const read = new FileReader();
         read.readAsDataURL(file.file.originFileObj);
         read.onload = () =>{
@@ -65,9 +74,8 @@ export default class Uppiclist extends React.Component{
                 load  : true,
                 config:{...this.state.config,fileList:file.fileList}
             });
+            console.log(this.state.config);
         }
-    }previewFile(a,b,v){
-        console.log(a,b,v);
     }
     render(){
         const upbutton = (
@@ -75,7 +83,7 @@ export default class Uppiclist extends React.Component{
         );
         return (
             <div style={this.props.config.style} className={this.props.config.className}>{this.state.config.fileList.length}
-                <Upload previewFile={this.previewFile} {...this.state.config}>
+                <Upload  {...this.state.config}>
                     {this.state.config.fileList.length < this.state.config.num ? upbutton : null}
                 </Upload>
             </div>
