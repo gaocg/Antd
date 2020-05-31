@@ -19,9 +19,8 @@ export default class Upfile extends React.Component{
      
   }
   componentWillReceiveProps(nextProps){
-    console.log(nextProps);
     this.setState({
-      config:{...nextProps.config}
+      config:{...nextProps.config,fileList:nextProps.config.fileList}
     })
 }
   render(){

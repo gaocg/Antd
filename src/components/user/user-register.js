@@ -15,12 +15,14 @@ class Register extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
+            list:[],
             config : {
                 type:"piclist",
                 //action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
                 className : "",
                 crop:true,
                 fileList:"",
+                //listType                :   "picture-card",
                 
                 rotate:true,
                 
@@ -30,10 +32,10 @@ class Register extends React.Component{
     }
     finish(v){
        this.setState(state=>{
-        state.config.fileList =  v.fileList;
-        return state.config.fileList;
+           state.config.fileList = v.fileList;
+           return state.config.fileList;
        })
-        console.log(this.state);
+        console.log(v);
     }
 
     render(){
@@ -87,7 +89,7 @@ class Register extends React.Component{
                         
                     </Form>
                 </Col>
-                <Col span={4}><div style={{width:300}}><Upfile config={this.state.config}/></div></Col>
+                <Col span={4}><div style={{width:300}}><Upfile  config={this.state.config}/></div></Col>
                 <Col xs={0} sm={1} md={2} lg={3} xl={4} xxl={5}  >
                 </Col>
             </Row>

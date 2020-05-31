@@ -45,12 +45,14 @@ export default class Uppiclist extends React.Component{
             }
         }
     }
-    componentWillReceiveProps(props,nextProps){
-        //console.log(props);
-        this.setState({
-            config:nextProps.config
+    componentWillReceiveProps(nextProps){
+        this.setState(state=>{
+            state.config.fileList = nextProps.config.fileList;
         })
-        console.log(this.state);
+    }
+    shouldComponentUpdate(props,nextProps){
+        console.log(props,nextProps);
+        return true;
     }
     beforeUpload(file){
         console.log(this.state);
