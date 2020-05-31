@@ -2,7 +2,7 @@
 列表形式展示上传图片
 */
 import React from "react"; 
-import {Upload} from "antd";
+import {Upload,message} from "antd";
 import {LoadingOutlined,PlusOutlined, ConsoleSqlOutlined, PropertySafetyFilled } from "@ant-design/icons";
 
 
@@ -11,6 +11,7 @@ export default class Uppiclist extends React.Component{
         super(props);
         this.state = {
             load : true,
+            fileList:[],
             config:{
                 accept                  :   this.props.config.accept || "",                                 //上传文件类型
                 action                  :   this.props.config.action || "",                                 //上传地址
@@ -21,7 +22,7 @@ export default class Uppiclist extends React.Component{
                 data                    :   this.props.config.data,                                         //上传功能需要的额外参数         
                 defaultFileList         :   "",                                                             //默认已上传的文件列表
                 disabled                :   false     ,                                                     //是否禁用
-                fileList                :   "",                                                             //已上传的文件列表
+                fileList                :   [],                                                             //已上传的文件列表
                 headers                 :   "",                                                             //上传请求头
                 listType                :   this.props.config.listType || "picture-card",
                 multiple                :   false,                                                          //是否支持多选文件
@@ -40,23 +41,25 @@ export default class Uppiclist extends React.Component{
                 className               :   this.props.config.className,                                    //gcg-circle 代表圆形 //自定义class
                 style                   :   this.props.config.style,
                 num                     :   12,      
-    
+                size                     :  2
             }
         }
     }
-    componentWillReceiveProps(nextProps){
-        console.log(nextProps);
+    componentWillReceiveProps(props,nextProps){
+        //console.log(props);
         this.setState({
             config:nextProps.config
         })
+        console.log(this.state);
     }
     beforeUpload(file){
+        console.log(this.state);
         return new Promise((resolve,reject)=>{
-            if(file.size/1024 > 2){
-                console.log("文件不能大于2M");
+            if(file.size/1024/1024 > this.state.config.size){
+                message.error("文件不能大于"+ this.state.config.size +"M");
                 reject(file);
-
             }else{   
+
                 resolve(file);
             }
             
@@ -65,17 +68,21 @@ export default class Uppiclist extends React.Component{
     }
     onChange(file){
         this.setState({
-            load:false
+            load:false,
+            
         });
-        const read = new FileReader();
-        read.readAsDataURL(file.file.originFileObj);
-        read.onload = () =>{
+        
             this.setState({
-                load  : true,
+                load:true,
                 config:{...this.state.config,fileList:file.fileList}
             });
-            console.log(this.state.config);
-        }
+            console.log(file.file);
+      
+
+        // this.setState(state =>{
+        //     state.config.fileList=file.fileList;
+        // });
+            
     }
     render(){
         const upbutton = (

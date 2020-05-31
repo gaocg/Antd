@@ -21,17 +21,19 @@ class Register extends React.Component{
                 className : "",
                 crop:true,
                 fileList:"",
+                
                 rotate:true,
                 
-                //onChange:(f)=>this.finish(f)
+                onChange:(f)=>this.finish(f)
             }
         }
     }
     finish(v){
-        this.setState({
-            config:{...this.state.config,fileList:v.fileList}
-        })
-        console.log(v);
+       this.setState(state=>{
+        state.config.fileList =  v.fileList;
+        return state.config.fileList;
+       })
+        console.log(this.state);
     }
 
     render(){
