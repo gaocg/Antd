@@ -26,16 +26,17 @@ class Register extends React.Component{
                 size:2,
                 rotate:true,
                 
-                onChange:(f)=>this.finish(f)
+                Change:(f)=>this.finish(f)
             }
         }
     }
     finish(v){
        this.setState(state=>{
            state.config.fileList = v.fileList;
-           return state.config.fileList;
+           state.config.state = true;
+           return state.config;
        })
-        console.log(v);
+       console.log(this.state.config)
     }
 
     render(){

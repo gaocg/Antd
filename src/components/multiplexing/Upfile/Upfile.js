@@ -15,14 +15,25 @@ export default class Upfile extends React.Component{
   constructor(props){
     super(props);
       this.state = {
-        config:this.props.config
+        config:this.props.config,
+        next:true,
       }
      
   }
-
+  componentWillReceiveProps(props){
+    const list = props.config.fileList.slice(-1)[0].size;
+    const size = props.config.size;
+    const msg = "文件不能大于" + size + "M";
+    if(list /1024/1024 > size){
+      message.error(msg);
+      this.setState(state=>{
+        state.next = false;
+        return state;
+      });
+    }
+  }
   shouldComponentUpdate(props,nextProps){
-    console.log(props,nextProps);
-    return true;
+    return this.state.next;
   }
   render(){
     //let config = this.props.config;

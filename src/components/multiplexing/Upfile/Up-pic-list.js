@@ -10,9 +10,8 @@ export default class Uppiclist extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            load : true,
-            fileList:[],
             config:{
+                
                 accept                  :   this.props.config.accept || "",                                 //上传文件类型
                 action                  :   this.props.config.action || "",                                 //上传地址
                 method                  :   this.props.config.method || "post",                             //上传请求的方式
@@ -38,10 +37,13 @@ export default class Uppiclist extends React.Component{
                 onDownload              :   undefined,                                                      //点击下载时的回调
                 //transformFile         :   null,                                                           //上传之前转换文件
                 iconRender              :   undefined,                                                      //自定义显示icon
+                //组件自定义属性
+                load                    :   false,
                 className               :   this.props.config.className,                                    //gcg-circle 代表圆形 //自定义class
                 style                   :   this.props.config.style,
+                Change                  :   this.props.config.Change || "",
                 num                     :   12,      
-                size                     :  2
+                size                    :   2
             }
         }
     }
@@ -50,45 +52,21 @@ export default class Uppiclist extends React.Component{
             state.config.fileList = nextProps.config.fileList;
         })
     }
-    shouldComponentUpdate(props,nextProps){
-        console.log(props,nextProps);
-        return true;
-    }
     beforeUpload(file){
-        console.log(this.state);
-        return new Promise((resolve,reject)=>{
-            if(file.size/1024/1024 > this.state.config.size){
-                message.error("文件不能大于"+ this.state.config.size +"M");
-                reject(file);
-            }else{   
-
-                resolve(file);
-            }
-            
-        });
-        
     }
     onChange(file){
-        this.setState({
-            load:false,
-            
-        });
-        
-            this.setState({
-                load:true,
-                config:{...this.state.config,fileList:file.fileList}
-            });
-            console.log(file.file);
-      
-
-        // this.setState(state =>{
-        //     state.config.fileList=file.fileList;
-        // });
-            
+        if(file.file.status == "loading"){
+            this.setState(state=>{
+                state.config.load = true;
+            })
+        }   
+        if(typeof this.state.config.Change == 'function'){
+            this.state.config.Change(file);
+        }        
     }
     render(){
         const upbutton = (
-            this.state.load ? <PlusOutlined/> : <LoadingOutlined />
+            this.state.config.load ? <LoadingOutlined /> : <PlusOutlined/> 
         );
         return (
             <div style={this.props.config.style} className={this.props.config.className}>{this.state.config.fileList.length}
