@@ -9,6 +9,7 @@
 import React from 'react';
 import Upheadpic from "./Up-head-pic";
 import Uppiclist from "./Up-pic-list";
+import {message} from "antd";
 import "./Upfile.scss";
 export default class Upfile extends React.Component{
   constructor(props){
@@ -18,11 +19,11 @@ export default class Upfile extends React.Component{
       }
      
   }
-  componentWillReceiveProps(nextProps){
-    this.setState({
-      config:{...nextProps.config,fileList:nextProps.config.fileList}
-    })
-}
+
+  shouldComponentUpdate(props,nextProps){
+    console.log(props,nextProps);
+    return true;
+  }
   render(){
     //let config = this.props.config;
     let Upload;

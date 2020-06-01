@@ -23,7 +23,7 @@ class Register extends React.Component{
                 crop:true,
                 fileList:"",
                 //listType                :   "picture-card",
-                
+                size:2,
                 rotate:true,
                 
                 onChange:(f)=>this.finish(f)
