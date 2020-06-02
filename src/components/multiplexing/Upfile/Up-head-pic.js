@@ -54,7 +54,6 @@ export default class Upheadpic extends React.Component{
             this.setState({
                 imgUrl:read.result,
                 load  : 2,
-                
             });
         }
     }

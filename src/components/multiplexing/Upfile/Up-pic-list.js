@@ -2,16 +2,15 @@
 列表形式展示上传图片
 */
 import React from "react"; 
-import {Upload,message} from "antd";
-import {LoadingOutlined,PlusOutlined, ConsoleSqlOutlined, PropertySafetyFilled } from "@ant-design/icons";
-
+import {Upload} from "antd";
+import {LoadingOutlined,PlusOutlined} from "@ant-design/icons";
+import Dialog from "../Modal/Dialog";
 
 export default class Uppiclist extends React.Component{
     constructor(props){
         super(props);
         this.state = {
             config:{
-                
                 accept                  :   this.props.config.accept || "",                                 //上传文件类型
                 action                  :   this.props.config.action || "",                                 //上传地址
                 method                  :   this.props.config.method || "post",                             //上传请求的方式
@@ -32,8 +31,8 @@ export default class Uppiclist extends React.Component{
                 withCredentials         :   false,                                                           //上传请求时是否携带 cookie
                 openFileDialogOnClick   :   true,                                                             //是否打开文件对话框
                 onChange                :   this.props.config.onChange || this.onChange.bind(this),
-                onPreview               :   undefined,                                                      //点击文件链接或预览图的回调
-                onRemove                :   undefined,                                                      //点击移除时的回调
+                onPreview               :   this.props.config.onPreview || this.onPreview,                  //点击文件链接或预览图的回调
+                onRemove                :   this.props.config.onRemove || this.onRemove ,                //点击移除时的回调
                 onDownload              :   undefined,                                                      //点击下载时的回调
                 //transformFile         :   null,                                                           //上传之前转换文件
                 iconRender              :   undefined,                                                      //自定义显示icon
@@ -44,17 +43,35 @@ export default class Uppiclist extends React.Component{
                 Change                  :   this.props.config.Change || "",
                 num                     :   12,      
                 size                    :   2
+            },
+            modal:{
+                visible : false,        //是否展示
+                title   :   "222",
+                //onCancel:'',      //关闭按钮
+                content : '',
+                footer:null,
             }
         }
     }
+
     componentWillReceiveProps(nextProps){
         this.setState(state=>{
             state.config.fileList = nextProps.config.fileList;
         })
     }
-    beforeUpload(file){
+    onPreview = file=>{
+        this.setState(state=>{
+            state.modal.visible = true;
+            state.modal.content = <img src={file.thumbUrl} />;
+            state.modal.title = file.name;
+            return state.modal;
+        })
     }
-    onChange(file){
+    
+    beforeUpload = file => {
+    }
+    onChange = file=>{
+        console.log(file);
         if(file.file.status == "loading"){
             this.setState(state=>{
                 state.config.load = true;
@@ -64,7 +81,7 @@ export default class Uppiclist extends React.Component{
             this.state.config.Change(file);
         }        
     }
-    render(){
+    render = ()=>{
         const upbutton = (
             this.state.config.load ? <LoadingOutlined /> : <PlusOutlined/> 
         );
@@ -73,6 +90,8 @@ export default class Uppiclist extends React.Component{
                 <Upload  {...this.state.config}>
                     {this.state.config.fileList.length < this.state.config.num ? upbutton : null}
                 </Upload>
+                <Dialog {...this.state.modal} />
+                
             </div>
             
         )

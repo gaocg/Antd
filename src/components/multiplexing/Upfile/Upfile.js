@@ -21,6 +21,12 @@ export default class Upfile extends React.Component{
      
   }
   componentWillReceiveProps(props){
+    return props.config.fileList.length ? this.checkSize(props) : null;
+  }
+  shouldComponentUpdate(props,nextProps){
+    return this.state.next;
+  }
+  checkSize = (props) =>{
     const list = props.config.fileList.slice(-1)[0].size;
     const size = props.config.size;
     const msg = "文件不能大于" + size + "M";
@@ -31,9 +37,6 @@ export default class Upfile extends React.Component{
         return state;
       });
     }
-  }
-  shouldComponentUpdate(props,nextProps){
-    return this.state.next;
   }
   render(){
     //let config = this.props.config;

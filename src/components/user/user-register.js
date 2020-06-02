@@ -25,7 +25,6 @@ class Register extends React.Component{
                 //listType                :   "picture-card",
                 size:2,
                 rotate:true,
-                
                 Change:(f)=>this.finish(f)
             }
         }
@@ -36,7 +35,7 @@ class Register extends React.Component{
            state.config.state = true;
            return state.config;
        })
-       console.log(this.state.config)
+
     }
 
     render(){
