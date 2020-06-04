@@ -1,36 +1,41 @@
 import React from 'react';
 import { Layout } from 'antd';
 import Login from "./user/login";
-import { BrowserRouter,Route,Link } from 'react-router-dom';
+import { BrowserRouter,Route,Switch } from 'react-router-dom';
 import Register from './user/user-register';
 import Upfile from "./multiplexing/Upfile/Upfile";
 import Home from "./main/home";
-
+import Head from "./header";
 const { Header, Footer, Sider, Content } = Layout;
-function App() {
 
- 
-  return (
+export default class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+    }
+  }
+  render(){
+    return(
     <BrowserRouter>
-    <Route path="/login/:name" component={Login} />
-    <Route path="/">
-    <Layout>
-      <Sider>Sider</Sider>
-        <Layout>
-          <Header>Header</Header>
-          <Content>
-              <Route path="/Home" component={Home} />
-              <Route path="/Upfile" exact component={Upfile} />
-              <Route path="/register" exact component={Register} />
-          </Content>
-          <Footer>Footer</Footer>
-        </Layout>
-      <Sider>right</Sider>
-    </Layout>
-    </Route>
+      <Switch>
+      <Route path="/login" exact component={Login} />
+        <Route path="/">
+          <Layout>
+            <Sider>Sider</Sider>
+              <Layout>
+                <Header><Head/></Header>
+                <Content>
+                    <Route path="/Home" component={Home} />
+                    <Route path="/Upfile" exact component={Upfile} />
+                    <Route path="/register" exact component={Register} />
+                </Content>
+                <Footer>Footer</Footer>
+              </Layout>
+            <Sider>right</Sider>
+          </Layout>
+        </Route>
+      </Switch>
     </BrowserRouter>
-  );
+    )
+  }
 }
-
-export default App;
-

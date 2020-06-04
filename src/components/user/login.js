@@ -24,35 +24,10 @@ const layout = {
         };
         this.change = this.change.bind(this);
     }
-    //组件创建之前
-    componentWillMount(){
-      alert(1);
-    }
-    //第一次渲染后
-    componentDidMount(){
-      alert(2);
-    }
-    //接收新的props时
-    componentWillReceiveProps(){
-      alert(3);
-    }
-    //state有改动时且render不变
-    componentWillUpdate(){
-      alert(4);
-    }
-    //组件更新时
-    shouldComponentUpdate(){
-      alert(5);
-    }
-    componentDidUpdate(){
-      alert(6);
-    } 
-
-    componentWillUnmount() {
-
-    }
     handleClick(type){
+      console.log(this);
        if(type){
+         console.log(this.props);
         this.props.history.push({
             pathname:'/register'
         });

@@ -1,11 +1,11 @@
 //用户注册组件
 import React from 'react';
-import { Form, Input, Button, Checkbox,Row,Col, Tooltip,
-    Select, InputNumber,Upload
+import { Form, Input, Button,Row,Col, Tooltip,
+    Select, InputNumber
  } from 'antd';
 
 import Upfile from "../multiplexing/Upfile/Upfile";
-import {QuestionCircleOutlined,LoadingOutlined,PlusOutlined } from "@ant-design/icons";
+import {QuestionCircleOutlined } from "@ant-design/icons";
 const layout = {
     labelCol: { span: 6 },
     wrapperCol: { span: 16 },
@@ -17,27 +17,32 @@ class Register extends React.Component{
         this.state = {
             list:[],
             config : {
-                type:"text",
+                type:"piclist",
                 //action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
                 className : "",
                 crop:true,
                 fileList:"",
+                listType:"text",
                 //listType                :   "picture-card",
                 size:2,
                 rotate:true,
-                Change:(f)=>this.finish(f)
+                Change:(f)=>this.click(f)
             }
         }
     }
-    finish(v){
-       this.setState(state=>{
-           state.config.fileList = v.fileList;
-           state.config.state = true;
-           return state.config;
-       })
-
+    finish(){
+        this.props.history.push({
+            pathname:'/login'
+        });
     }
-
+    click(v){
+        
+        this.setState(state=>{
+            state.config.fileList = v.fileList;
+            state.config.state = true;
+            return state.config;
+        })
+    }
     render(){
         const selectArea = (
             <Form.Item name="prefix" noStyle>
