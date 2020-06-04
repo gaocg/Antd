@@ -3,7 +3,6 @@ import { Layout } from 'antd';
 import Login from "./user/login";
 import { BrowserRouter,Route,Switch } from 'react-router-dom';
 import Register from './user/user-register';
-import Upfile from "./multiplexing/Upfile/Upfile";
 import Home from "./main/home";
 import Head from "./header";
 const { Header, Footer, Sider, Content } = Layout;
@@ -25,8 +24,7 @@ export default class App extends React.Component{
               <Layout>
                 <Header><Head/></Header>
                 <Content>
-                    <Route path="/Home" component={Home} />
-                    <Route path="/Upfile" exact component={Upfile} />
+                    <Route path="/" exact component={Home} />
                     <Route path="/register" exact component={Register} />
                 </Content>
                 <Footer>Footer</Footer>
