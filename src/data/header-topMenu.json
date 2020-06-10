@@ -1,0 +1,23 @@
+{
+   "link" :[
+        {"title":"主站","icon":"AntDesignOutlined","link":"#"},
+        {"title":"番剧","icon":"","link":"#"},
+        {"title":"游戏中心","icon":"","link":"#"},
+        {"title":"直播","icon":"","link":"#"},
+        {"title":"会员购","icon":"","link":"#"},
+        {"title":"漫画","icon":"","link":"#"},
+        {"title":"赛事","icon":"","link":"#"},
+        {"title":"BW","icon":"","link":"#"},
+        {"title":"下载APP","icon":"MobileOutlined","link":"#"}
+    ],
+
+    "user":[
+        {"id":"user","title":"22","link":"#","headPic":true},
+        {"id":"dhy","title":"大会员","link":"#"},
+        {"id":"message","title":"消息","link":"#"},
+        {"id":"dt","title":"动态","link":"#"},
+        {"id":"sc","title":"收藏","link":"#"},
+        {"id":"ls","title":"历史","link":"#"},
+        {"id":"cz","title":"创作中心","link":"#"}
+    ]
+}

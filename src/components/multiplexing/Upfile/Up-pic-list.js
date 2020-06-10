@@ -86,7 +86,7 @@ export default class Uppiclist extends React.Component{
             this.state.config.load ? <LoadingOutlined /> : <PlusOutlined/> 
         );
         return (
-            <div style={this.props.config.style} className={this.props.config.className}>{this.state.config.fileList.length}
+            <div style={this.props.config.style} className={this.props.config.className}>
                 <Upload  {...this.state.config}>
                     {this.state.config.fileList.length < this.state.config.num ? upbutton : null}
                 </Upload>
