@@ -3,6 +3,7 @@ import {Layout} from "antd";
 import { Link } from 'react-router-dom';
 import userInfo from "../../data/user.json";
 import HeaderTopMenu from "./Header-topMenu";
+import HeaderBottomMenu from "./Header-bottomMenu";
 
 import topMenu from "../../data/header-topMenu.json";
 import bottomMenu from "../../data/header-bottomMenu.json";
@@ -25,7 +26,7 @@ export default class header extends React.Component{
                     </div>
                 </Header>
                 <Content className="header-bottomMenu">
-123                 
+                         <HeaderBottomMenu />
                 </Content>
             </Layout>
         );
