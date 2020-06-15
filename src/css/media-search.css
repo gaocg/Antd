@@ -2,25 +2,30 @@
     html {
         font-size:16px;
     }
+    .header-bottomMenu > div{width:1600px}
 }
 @media screen and (min-width: 1200px) and (max-width: 1599px){
     html {
         font-size:12px;
     }
+    .header-bottomMenu > div{width:1200px}
 }
 @media screen and (min-width: 992px) and (max-width: 1199px){
     html {
         font-size:10px;
     }
+    .header-bottomMenu > div{width:990px}
 }
 @media screen and (min-width: 768px) and (max-width: 991px){
     html {
         font-size:8px;
     }
+    .header-bottomMenu > div{width:990px}
 }
 @media screen and (min-width: 576px) and (max-width: 767px){
     html {
         font-size:6px;
     }
+    .header-bottomMenu > div{width:990px}
 }
 body{min-width:1000px}

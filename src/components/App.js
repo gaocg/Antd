@@ -3,9 +3,9 @@ import { Layout } from 'antd';
 import Login from "./user/login";
 import { BrowserRouter,Route,Switch } from 'react-router-dom';
 import Register from './user/user-register';
-import Home from "./contentArea/home";
+import Body from "./contentArea/Body";
 import Head from "./headerArea/Header";
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Footer, Content } = Layout;
 
 export default class App extends React.Component{
   constructor(props){
@@ -23,12 +23,10 @@ export default class App extends React.Component{
           <Layout style={{height:'100%'}}>
             <Header style={{height:"288px"}}><Head/></Header>
               <Layout>
-                <Sider width={"10%"} className="left-bg"></Sider> 
-                <Content>
-                  <Route path="/" exact component={Home} />
+                <Content style={{background:"#fff"}}>
+                  <Route path="/" exact component={Body} />
                   <Route path="/register" exact component={Register} />
                 </Content>
-                <Sider width={"10%"} className="right-bg">right</Sider>
               </Layout>
             <Footer>Footer</Footer>
           </Layout>

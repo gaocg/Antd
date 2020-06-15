@@ -1,6 +1,0 @@
-.header-top{height:180px;position: relative;}
-.header-top{background: url(../img/header.png) no-repeat ;height:100%;}
-.header-top-mask{z-index: 0;top:0;z-index: 0;position: absolute;width:100%;height:100%;background: linear-gradient(rgba(0,0,0,.4),transparent);}
-.header-topMenu{position: relative;z-index: 1;padding:10px 24px;height:54px;line-height:30px;color:#fff;display:flex;justify-content: space-between;}
-.header-topMenu a{color:#fff}
-.header-bottomMenu{height:108px;background-color: #fff;}

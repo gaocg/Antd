@@ -1,5 +1,7 @@
 import React from "react";
 import Vcarousel from "../multiplexing/Carousel/carousel";
+import content from "../../data/body/bodyContent/body-content1.json";//展示数据来源
+
 export default class Home extends React.Component{
     constructor(props){
         super(props);
@@ -16,14 +18,22 @@ export default class Home extends React.Component{
                     //style       :   '',           //样式
                     className   :   ''        
                 },
-                list:[<img key="1" style={{width:"100%"}} src={require("../../img/gcg-bg.jpg")} />,<img key="2" style={{width:"100%"}} src={require("../../img/gcg-bg.jpg")} />,<img key="3" style={{width:"100%"}} src={require("../../img/gcg-bg.jpg")} />]
+                list:[]
             }
             
         }
     }
     render(){
         return (
-            <Vcarousel {...this.state.carousel}/>
+            <div className="body-content1">
+                {/*第一排 width:550px height:242px*/} 
+                <div className="body-content1-top">
+                    <div className="body-content1-top-carousel"></div>
+                    <div className="body-content1-top-list"></div>
+                </div>
+                {/*第二排*/} 
+                <div className="body-content1-bottom"></div>
+            </div>
         )
     }
 }
