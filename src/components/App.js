@@ -20,16 +20,14 @@ export default class App extends React.Component{
       <Switch>
       <Route path="/login" exact component={Login} />
         <Route path="/">
-          <Layout style={{height:'100%'}}>
             <Header style={{height:"288px"}}><Head/></Header>
-              <Layout>
+              <Layout >
                 <Content style={{background:"#fff"}}>
                   <Route path="/" exact component={Body} />
                   <Route path="/register" exact component={Register} />
                 </Content>
               </Layout>
             <Footer>Footer</Footer>
-          </Layout>
         </Route>
       </Switch>
     </BrowserRouter>

@@ -39,12 +39,11 @@ export default class HeaderBottomMenu extends React.Component{
 
     }
     popover(node,item){
-        console.log(item);
         const list = item.children.list; 
         const content = (
             <div className="bottomMenu-poppver" style={{width:item.children.width-20}}>
                     {list.map((item,i)=>{
-                      return  <a>{item.title}</a>
+                      return  <a key={i}>{item.title}</a>
                     })}
             </div>
         );

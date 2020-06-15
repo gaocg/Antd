@@ -1,13 +1,17 @@
 @import url(./media-search.css);
-#root{height:100%}
 /*.left-bg{background: url(../img/WOW.jpeg) no-repeat;background-size:auto 100% ;background-position: 10%;}
 .right-bg{background: url(../img/WOW.jpeg) no-repeat;background-size:auto 100% ;background-position: 90%;}
 */
-*,ol, ul, dl{margin:0;padding:0}
+*,ol, ul, dl,p{margin:0;padding:0}
 
 li{list-style: none;}
 .ant-layout-header{padding:0}
 
+.gg{background-size: cover;background-image: url(../img/gg.png) ;width:38px;height:22px;}
+.prev,.next{font-size:30px;position: absolute;top:calc(50% - 35px);line-height: 70px;background:rgba(0,0,0,.6);color:#fff;cursor: pointer;}
+.prev{left:0;border-radius: 0 2px 2px 0;}
+.next{right:0;border-radius:2px  0 0 2px ;}
+.flex{display:flex;justify-content: center;align-items: center;}
 
 .header-top{background: url(../img/header.png) no-repeat ;height:180px;position: relative;}
 .header-top-mask{z-index: 0;top:0;z-index: 0;position: absolute;width:100%;height:100%;background: linear-gradient(rgba(0,0,0,.4),transparent);}

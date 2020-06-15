@@ -21,8 +21,16 @@ export default class Acarousel extends React.Component{
         super(props);
         this.state={...this.props}
     }
+    componentWillReceiveProps (props){
+        this.setState({
+            state:{...props}
+        })
+        console.log(this.props)
+    }
+    componentDidMount(){
+
+    }
     render(){
-        console.log(this.state);
          return (
              <Carousel {...this.state.config}>
                  {this.state.list}
