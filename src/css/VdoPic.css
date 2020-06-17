@@ -1,0 +1,29 @@
+/*vdo-pic模块*/
+@keyframes show
+{
+    from{opacity:0}
+    to{opacity: 1;}
+}
+@keyframes vdo-pic-tit-show
+{
+    from{top:64px}
+    to{top:0}
+}
+
+.vdo-pic-tit{position: absolute;overflow: hidden;}
+.vdo-pic-mask{width:100%;height:100%;position: absolute;opacity: 0;background-color: rgba(0,0,0,.7);}
+.vdo-pic:hover > .watch-later{
+    animation: show 0.5s;animation-fill-mode:forwards;animation-delay: 0.2s;
+}
+.vdo-pic:hover >.vdo-pic-mask{opacity: 1;}
+.vdo-pic{position: relative;overflow: hidden;color:#fff;margin-bottom: 10px;}
+.vdo-pic:hover > .title {white-space: normal;}
+.vdo-pic-tit{position:absolute;width:100%;padding:24px 10px 10px 10px;top:64px;}
+.vdo-pic-tit .title{margin-bottom:6px;height:36px;overflow: hidden;line-height:18px;text-overflow: ellipsis;white-space: nowrap;}
+.vdo-pic-tit .up, .vdo-pic-tit .play{font-size: 12px;margin-bottom:3px;color:#e0e0e0}
+.vdo-pic:hover > .vdo-pic-tit{animation: vdo-pic-tit-show 0.3s;animation-fill-mode:forwards}
+
+@media screen and (max-width: 1438px){
+    .vdo-pic-tit{padding:6px 10px 10px 10px;}
+}
+/*vdo-pic模块结束*/

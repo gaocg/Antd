@@ -1,7 +1,7 @@
 import React from "react";
 import Vcarousel from "../multiplexing/Carousel/carousel";
 import Icon from "../multiplexing/icon";
-import {LeftOutlined,RightOutlined} from "@ant-design/icons";
+import VdoPic from "../multiplexing/VdoPic";
 export default class Home extends React.Component{
     constructor(props){
         super(props);
@@ -59,9 +59,15 @@ export default class Home extends React.Component{
                 <div className="body-content1-top">
                     <div className="body-content1-top-carousel"><Vcarousel {...this.state.carousel}/></div>
                     <div className="body-content1-top-list" onMouseEnter={this.MouseEvent.bind(this)}  onMouseLeave={this.MouseLeave.bind(this)}>
+                        
+                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
+                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
+                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
+                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
+                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
+                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
                         {this.state.show ? <Icon type="prev" /> : ""}
                         {this.state.show ? <Icon type="next" /> : ""}
-                        
                     </div>
                 </div>
                 {/*第二排*/} 
