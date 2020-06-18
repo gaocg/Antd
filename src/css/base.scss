@@ -1,14 +1,6 @@
-.ant-layout-sider ,.ant-layout-header{background: #fff;}
-.gcg-login-bg{
-    background:url(../img/gcg-bg.jpg) no-repeat;
-
-    background-size: 100% 100%;
-    position: absolute;
-    overflow: auto;
-    height:100%;
-    width:100%;
-}
-.gcg-margin-top25{
-    margin-top:10%;
-}
-.head{width:100%;justify-content: space-between;}
+*,ol, ul, dl,p,h1,h2,h3,h4,h5{margin:0;padding:0}
+h4{font-size: 20px;line-height: 36px;margin-right:20px}
+a{color:#505050}
+a:hover{color:#00a1d6}
+li{list-style: none;}
+.ant-layout-header{padding:0}

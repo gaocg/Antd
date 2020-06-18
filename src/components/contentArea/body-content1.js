@@ -2,6 +2,7 @@ import React from "react";
 import Vcarousel from "../multiplexing/Carousel/carousel";
 import Icon from "../multiplexing/icon";
 import VdoPic from "../multiplexing/VdoPic";
+import {FireFilled,SoundFilled} from "@ant-design/icons";
 export default class Home extends React.Component{
     constructor(props){
         super(props);
@@ -28,10 +29,44 @@ export default class Home extends React.Component{
                 {"title":"免费学英语2","type":"00","url":require("../../img/body/bodyContent/body-content1-carousel5.jpg")}
             ],
             show:false,
-            topList:[
-                {"title":"飞驰人生","type":"00","url":require("../../img/body/bodyContent/body-content1-carousel1.png")},
-                
-            ],
+            topList:{
+                page:0,
+                list:[
+                //1
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                //2
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                //3
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+            ]
+            },
             bottomList:[]
         }
     }
@@ -52,6 +87,9 @@ export default class Home extends React.Component{
             show:false
         })
     }
+    change(type){
+      
+    }
     render(){
         return (
             <div className="body-content1">
@@ -59,19 +97,30 @@ export default class Home extends React.Component{
                 <div className="body-content1-top">
                     <div className="body-content1-top-carousel"><Vcarousel {...this.state.carousel}/></div>
                     <div className="body-content1-top-list" onMouseEnter={this.MouseEvent.bind(this)}  onMouseLeave={this.MouseLeave.bind(this)}>
-                        
-                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
-                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
-                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
-                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
-                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
-                        <VdoPic  url={require("../../img/body/bodyContent/body-content1-carousel1.png")}/>
-                        {this.state.show ? <Icon type="prev" /> : ""}
-                        {this.state.show ? <Icon type="next" /> : ""}
+                        {this.state.topList.list.map(item=>{
+                            return <VdoPic  {...item}/>
+                        })}
+
+                        {this.state.show ? <Icon type="prev" onClick={this.change(0)}/> : ""}
+                        {this.state.show ? <Icon type="next" onClick={this.change(1)}/> : ""}
                     </div>
                 </div>
-                {/*第二排*/} 
-                <div className="body-content1-bottom"></div>
+                {/*第二排*/}
+                <div className="body-content1-bottom content">
+                    <div className="leftArea">
+                        <header className="flex flex-start content-header">
+                            <SoundFilled style={{fontSize:32,marginRight:6,color:"#FFD778"}}/>
+                            <h4 >推广</h4>
+                            <a ><FireFilled style={{fontSize:16,marginRight:6,color:"red"}}/>什么？统考已经开始了？</a>
+                        </header>
+                    </div>
+                    <div className="rightArea">
+                        <h5 className="online-list">
+                            <a>在线列表</a>
+                        </h5>
+                        
+                    </div>
+                </div>
             </div>
         )
     }
