@@ -1,9 +1,13 @@
 .body{margin: 0 auto;width:1630px}
 .body-content1-top-carousel{width:550px; height:242px;border-radius: 2px;}
 .body-content1-top-list{width: 1070px;height: 242px;position: relative;display: flex;flex-wrap: wrap;justify-content: space-between;overflow: hidden;}
-.body-content1-top-list > div,.vdo-pic{width:206px;height:116px;display:flex;flex-wrap: wrap;align-items: center;cursor: pointer;border-radius: 2px;}
+.vdo-pic{display:flex;flex-wrap: wrap;align-items: center;cursor: pointer;border-radius: 2px;}
+.vdo-pic-img{width:206px;height:116px;}
 .content,.body-content1-top,.body-content1-bottom{margin-bottom:40px;display: flex;justify-content: space-between;align-items: center;}
 .prev,.next{z-index:2}
+
+
+
 @media screen and (max-width: 1870px){
     .body{width: 1414px;} 
     .body-content1-top-list{width: 854px;height: 242px;}
@@ -21,7 +25,7 @@
     .body{width: 999px;} 
     .body-content1-top-carousel{width:459px;height:202px}
     .body-content1-top-list{width: 530px;height: 202px;}
-    .body-content1-top-list > div,.vdo-pic{width:170px;height:96px}
+    .vdo-pic-img{width:170px;height:96px}
     .body-content1-top-list  .vdo-pic:nth-child(n+7){display: none;}
 }
 

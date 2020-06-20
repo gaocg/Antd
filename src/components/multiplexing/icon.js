@@ -30,7 +30,7 @@ export default class Icon extends React.Component{
                 </i>
             </Tooltip>
             :
-            <i className={this.state.type}>
+            <i className={this.state.type} {...this.props}>
                 {this.getIcon()}
             </i>
         )

@@ -15,30 +15,34 @@ export default class VdoPic extends React.Component{
             play:props.play     //播放量
         }
     }
-
     render(){
         return (
-            <div className="vdo-pic" style={{position:"relative",overflow:"hidden"}}>
-                <img src={this.state.url} style={{width:"100%",height:"100%"}}/>
-                <Icon  type="watch-later"/>
-                {this.state.type == "vdo-mask" ?<div className="vdo-pic-mask"></div> : null}
-                {/*鼠标悬浮展示详情*/}
-                {this.state.type == "vdo-mask" 
+            <div className="vdo-card">
+                {
+                this.state.type == "vdo-mask"//有遮罩的视图
                 ?
-                <div className="vdo-pic-tit" >
-                    <p className="title" title={this.state.title}>{this.state.title}</p>
-                    <p className="up"><i >up</i>{this.state.up}</p>
-                    <p className="play">{this.state.play}</p>
+                <div className="vdo-pic" style={{position:"relative",overflow:"hidden"}}>
+                    <img className="vdo-pic-img" src={this.state.url} />
+                    <Icon  type="watch-later"/>
+                    <div className="vdo-pic-mask"></div>
+                    {/*鼠标悬浮展示详情*/}
+                    <div className="vdo-pic-tit" >
+                        <p className="title" title={this.state.title}>{this.state.title}</p>
+                        <p className="up"><i >up</i>{this.state.up}</p>
+                        <p className="play">{this.state.play}</p>
+                    </div>
                 </div>
+                :
+                this.state.type == "vdo-progress"//有进度条的视图
+                ?
+                <div className="vdo-progress">
+                </div>  
                 :
                 null
                 }
-                         
-                
-                
-                {/*稍后再看图标*/}
-                
+
             </div>
+            
         )
     }
 }

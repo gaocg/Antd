@@ -25,7 +25,6 @@ export default class Acarousel extends React.Component{
         this.setState({
             state:{...props}
         })
-        console.log(this.props)
     }
     componentDidMount(){
 

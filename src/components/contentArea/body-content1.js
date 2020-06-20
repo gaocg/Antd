@@ -31,41 +31,41 @@ export default class Home extends React.Component{
             show:false,
             topList:{
                 page:0,
-                list:[
-                //1
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
-                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
-                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
-                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                //2
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
-                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
-                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
-                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                //3
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
-                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
-                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-                {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
-                {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
-                {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
-            ]
+                totalList:[
+
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                        {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                        {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                        {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+
+                        {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                        {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                        {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                        {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        
+                        {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                        {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                        {"type":"vdo-mask","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        {"type":"vdo-mask","title":"骁话一下：为什么中日韩一谈合作，钓鱼岛就出事儿？","up":"观察者网","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                        {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
+                ]
             },
             bottomList:[]
         }
@@ -88,7 +88,17 @@ export default class Home extends React.Component{
         })
     }
     change(type){
-      
+      if(type){
+        this.setState(state=>{
+            state.topList.page++;
+            return  state.topList.page;
+        })
+      }else{
+        this.setState(state=>{
+            state.topList.page--;
+            return  state.topList.page;
+        })
+      }
     }
     render(){
         return (
@@ -97,12 +107,12 @@ export default class Home extends React.Component{
                 <div className="body-content1-top">
                     <div className="body-content1-top-carousel"><Vcarousel {...this.state.carousel}/></div>
                     <div className="body-content1-top-list" onMouseEnter={this.MouseEvent.bind(this)}  onMouseLeave={this.MouseLeave.bind(this)}>
-                        {this.state.topList.list.map(item=>{
-                            return <VdoPic  {...item}/>
-                        })}
+                        {this.state.topList.totalList.map((item,index)=>{
 
-                        {this.state.show ? <Icon type="prev" onClick={this.change(0)}/> : ""}
-                        {this.state.show ? <Icon type="next" onClick={this.change(1)}/> : ""}
+                            return index>=Math.abs(this.state.topList.page%3) && index<Math.abs(this.state.topList.page%3)+10 ?<VdoPic key={index} {...item}/> :null
+                        })}
+                        {this.state.show ? <Icon type="prev" onClick={()=>this.change(0)}/> : ""}
+                        {this.state.show ? <Icon type="next" onClick={()=>this.change(1)}/> : ""}
                     </div>
                 </div>
                 {/*第二排*/}

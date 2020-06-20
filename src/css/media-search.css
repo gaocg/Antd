@@ -1,20 +1,20 @@
 
-.header-bottomMenu > div{width:1630px}
+.foot-box,.header-bottomMenu > div{width:1630px;margin: auto;}
 body{min-width:999px}
 .rightArea{width:320px}
 .leftArea{width:1286px}
 @media screen and (max-width: 1870px){
-    .header-bottomMenu > div{width:1414px}
+    .foot-box,.header-bottomMenu > div{width:1414px}
     .leftArea{width: 1070px;}
 }
 
 @media screen and (max-width: 1654px){
-    .header-bottomMenu > div{width:1198px}
+    .foot-box,.header-bottomMenu > div{width:1198px}
     .leftArea{width: 854px;}
 }
 
 @media screen and (max-width: 1438px){
-    .header-bottomMenu > div{width:999px}
+    .foot-box,.header-bottomMenu > div{width:999px}
     .rightArea{width:265px}
     .leftArea{width: 710px;}
 }
