@@ -67,7 +67,9 @@ export default class Home extends React.Component{
                         {"type":"vdo-mask","title":"耗时...算了白嫖吧！","up":"老番茄","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic2.jpg")},
                 ]
             },
-            bottomList:[]
+            bottomList:[
+                {"type":"vdo-progress","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+            ]
         }
     }
     componentWillMount(){
@@ -122,13 +124,16 @@ export default class Home extends React.Component{
                             <SoundFilled style={{fontSize:32,marginRight:6,color:"#FFD778"}}/>
                             <h4 >推广</h4>
                             <a ><FireFilled style={{fontSize:16,marginRight:6,color:"red"}}/>什么？统考已经开始了？</a>
+                            {this.state.bottomList.map((item,index)=>{
+                                return <VdoPic key={index} {...item}/>
+                            })}
                         </header>
                     </div>
                     <div className="rightArea">
                         <h5 className="online-list">
                             <a>在线列表</a>
                         </h5>
-                        
+                        <a > <img style={{width:"100%"}} src={require("../../img/body/bodyContent/content1-pic.jpg")}/></a>
                     </div>
                 </div>
             </div>

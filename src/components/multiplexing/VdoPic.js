@@ -36,6 +36,7 @@ export default class VdoPic extends React.Component{
                 this.state.type == "vdo-progress"//有进度条的视图
                 ?
                 <div className="vdo-progress">
+                    123
                 </div>  
                 :
                 null
