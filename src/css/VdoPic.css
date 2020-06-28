@@ -9,12 +9,13 @@
     from{top:64px}
     to{top:0}
 }
-.vdo-card{margin-bottom:10px}
+.vdo-card{margin-bottom:10px;cursor: pointer;}
 .vdo-pic-tit{position: absolute;overflow: hidden;}
-.vdo-pic-mask{width:100%;height:100%;position: absolute;opacity: 0;background-color: rgba(0,0,0,.7);}
-.vdo-pic:hover > .watch-later{
+.vdo-pic-mask{width:100%;height:100%;position: absolute;opacity: 0;background-color: rgba(0,0,0,.7);border-radius: 2px;}
+.vdo-card:hover  .watch-later{
     animation: show 0.5s;animation-fill-mode:forwards;animation-delay: 0.2s;
 }
+.vdo-card span{color:#fff}
 .vdo-pic:hover >.vdo-pic-mask{opacity: 1;}
 .vdo-pic{position: relative;overflow: hidden;color:#fff}
 .vdo-pic:hover > .title {white-space: normal;}
@@ -27,3 +28,11 @@
     .vdo-pic-tit{padding:6px 10px 10px 10px;}
 }
 /*vdo-pic模块结束*/
+.vdo-progress p:hover{color:#00a1d6}
+a.vdo-progress-title{display: inline-block; font-size: 14px;line-height:20px;margin:10px 0 8px;height:40px;text-overflow: ellipsis;padding-right: 12px;overflow: hidden;-webkit-box-orient: vertical;}
+a.vdo-progress-up{font-size: 12px;color: #999;line-height: 16px;display: block;}
+.vdo-progress-count{position: absolute;display: flex;align-items: center;justify-content: space-between;line-height:16px;padding:6px 8px;bottom:0px;width:100%}
+.vdo-progress-count .count-left{display: flex;align-items: center;}
+.vdo-progress-count .count-right{display: none;}
+.vdo-card:hover .count-left{display:none}
+.vdo-card:hover .count-right{display:block}

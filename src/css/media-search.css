@@ -6,11 +6,13 @@ body{min-width:999px}
 @media screen and (max-width: 1870px){
     .foot-box,.header-bottomMenu > div{width:1414px}
     .leftArea{width: 1070px;}
+    
 }
 
 @media screen and (max-width: 1654px){
     .foot-box,.header-bottomMenu > div{width:1198px}
     .leftArea{width: 854px;}
+    
 }
 
 @media screen and (max-width: 1438px){

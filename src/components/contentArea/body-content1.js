@@ -3,7 +3,7 @@ import Vcarousel from "../multiplexing/Carousel/carousel";
 import Icon from "../multiplexing/icon";
 import VdoPic from "../multiplexing/VdoPic";
 import {FireFilled,SoundFilled} from "@ant-design/icons";
-export default class Home extends React.Component{
+export default class bodyContent1 extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -68,7 +68,12 @@ export default class Home extends React.Component{
                 ]
             },
             bottomList:[
-                {"type":"vdo-progress","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-progress","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari钓鱼岛就出事","up":"战双帕弥什","play":"1.5万播放","time":"04:09","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-progress","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari","up":"战双帕弥什","play":"1.5万播放","time":"04:09","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-progress","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari钓鱼岛就出事","up":"战双帕弥什","play":"1.5万播放","time":"04:09","url":require("../../img/body/bodyContent/vdo-pic1.jpg")},
+                {"type":"vdo-progress","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari钓鱼岛就出事","up":"战双帕弥什","play":"1.5万播放","time":"04:09","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-progress","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari钓鱼岛就出事","up":"战双帕弥什","play":"1.5万播放","time":"04:09","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
+                {"type":"vdo-progress","title":"【战双帕弥什】「九龙环城」决战曲EP - Hikari钓鱼岛就出事","up":"战双帕弥什","play":"1.5万播放","time":"04:09","url":require("../../img/body/bodyContent/vdo-pic3.webp")},
             ]
         }
     }
@@ -124,10 +129,13 @@ export default class Home extends React.Component{
                             <SoundFilled style={{fontSize:32,marginRight:6,color:"#FFD778"}}/>
                             <h4 >推广</h4>
                             <a ><FireFilled style={{fontSize:16,marginRight:6,color:"red"}}/>什么？统考已经开始了？</a>
+                        </header>
+                        <div className="flex space-between">
                             {this.state.bottomList.map((item,index)=>{
                                 return <VdoPic key={index} {...item}/>
                             })}
-                        </header>
+                        </div>
+                        
                     </div>
                     <div className="rightArea">
                         <h5 className="online-list">
