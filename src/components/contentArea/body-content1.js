@@ -115,7 +115,6 @@ export default class bodyContent1 extends React.Component{
                     <div className="body-content1-top-carousel"><Vcarousel {...this.state.carousel}/></div>
                     <div className="body-content1-top-list" onMouseEnter={this.MouseEvent.bind(this)}  onMouseLeave={this.MouseLeave.bind(this)}>
                         {this.state.topList.totalList.map((item,index)=>{
-
                             return index>=Math.abs(this.state.topList.page%3) && index<Math.abs(this.state.topList.page%3)+10 ?<VdoPic key={index} {...item}/> :null
                         })}
                         {this.state.show ? <Icon type="prev" onClick={()=>this.change(0)}/> : ""}

@@ -43,7 +43,7 @@ export default class VdoPic extends React.Component{
                     <div style={{position:"relative"}}>
                         <img className="vdo-pic-img" src={this.state.url} />
                         <Icon  type="watch-later"/>
-                        <div className="vdo-progress-count">
+                        <div className="vdo-count">
                             <div className="count-left">
                                 <span>{this.state.play}</span>
                                 <span>{this.state.assist}</span>
@@ -53,6 +53,24 @@ export default class VdoPic extends React.Component{
                     </div>
                     <a className="vdo-progress-title">{this.state.title}</a>
                     {this.state.up?<a className="vdo-progress-up"><i >up</i>{this.state.up}</a>:null}
+                    
+                </div>  
+                :
+                this.state.type == "vdo-live"//直播的视图
+                ?
+                <div className="vdo-live">
+                    <div style={{position:"relative"}}>
+                        <img className="vdo-pic-img" src={this.props.url} />
+                        <img className="vdo-pic-img vdo-live-bg" src={this.props.bgImg}/>
+                        <div className="vdo-count">
+                            <div className="count-left">
+                                <span>{this.props.player}</span>
+                            </div>
+                            <div className="count-right"><span>{this.state.time}</span></div>
+                        </div>
+                    </div>
+                    <a className="vdo-live-title">{this.state.title}</a>
+                    {this.state.up?<a className="vdo-live-up"><i >up</i>{this.state.up}</a>:null}
                     
                 </div>  
                 :

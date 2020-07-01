@@ -22,7 +22,7 @@ export default class header extends React.Component{
                     <HeaderTopMenu  data={this.state.topMenu}/>
                     <div className="header-top-mask"></div>
                     <div style={{position:"relative",margin:"0 auto","width":"80%"}}>
-                        <a><img src={require("../../img/Logo.png")}/></a>
+                        <a><img style={{width:"auto"}} src={require("../../img/Logo.png")}/></a>
                     </div>
                 </Header>
                 <Content className="header-bottomMenu">
