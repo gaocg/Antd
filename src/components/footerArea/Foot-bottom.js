@@ -1,6 +1,6 @@
 import React from"react";
 import "./Foot.css";
-import { RedditSquareFilled } from "@ant-design/icons";
+//import { RedditSquareFilled } from "@ant-design/icons";
 
 export default class FootBottom extends React.Component{
     constructor(props){
@@ -13,13 +13,13 @@ export default class FootBottom extends React.Component{
             },
             text:[
                 [
-                    <a>营业执照</a>,
+                    <a href="#">营业执照</a>,
                     "信息网络传播视听节目许可证：0910417",
                     "网络文化经营许可证 沪网文【2019】3804-274号",
                     "广播电视节目制作经营许可证：（沪）字第01248号",
                     "增值电信业务经营许可证 沪B2-20100043",
                     "互联网ICP备案",
-                    <a>沪ICP备13002172号-3</a>
+                    <a href="">沪ICP备13002172号-3</a>
                 ],
 
             ]
@@ -44,7 +44,7 @@ export default class FootBottom extends React.Component{
                 <div className="foot-bottom-left" >
                     <img src={require("../../img/footer/partner.png")} />
                     <img src={require("../../img/footer/pic962110.png")} />
-                    <a><img src={this.state.changePic.type ? this.state.changePic.src1 : this.state.changePic.src2} />
+                    <a href=""><img src={this.state.changePic.type ? this.state.changePic.src1 : this.state.changePic.src2} />
                     </a>
                 </div>
                 <div className="foot-bottom-right">
@@ -52,7 +52,7 @@ export default class FootBottom extends React.Component{
                         return (
                             <p style={{fontSize:12}} key={index}>
                                 {item.map((ctx,index)=>{
-                                   return <span>{ctx}</span>
+                                   return <span key={index}>{ctx}</span>
                                 })}
                             </p>
                         )

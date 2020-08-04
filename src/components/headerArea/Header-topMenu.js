@@ -37,6 +37,8 @@ export default class HeaderTopMenu extends React.Component{
                 return <AntDesignOutlined style={{marginRight:6}}/>
             case "MobileOutlined":
                 return <MobileOutlined   style={{marginRight:2}}/>
+            default :
+                return "";
         }
     }
     render(){
@@ -52,7 +54,7 @@ export default class HeaderTopMenu extends React.Component{
         const search = (
             this.state.width <1100 
             ?
-            <a><SearchOutlined style={{fontSize:20,paddingTop:10}}/></a> 
+            <a href=""><SearchOutlined style={{fontSize:20,paddingTop:10}}/></a> 
             :
             <Search placeholder="input search text" style={{width:this.state.width - 1000 >500 ? 500 :this.state.width - 1000 }} />
     

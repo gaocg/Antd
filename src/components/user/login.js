@@ -1,20 +1,12 @@
 //登录组件
-import {Input,Space,Card,Button, Checkbox ,Form,Layout,
+import {Input,Button, Checkbox ,Form,Layout,
   Row,Col,Tabs ,Select
 } from 'antd';
-import { StarOutlined, TableOutlined, UserOutlined} from "@ant-design/icons";
+import { TableOutlined, UserOutlined} from "@ant-design/icons";
 import React from 'react';
 const {  Content } = Layout;
 const {TabPane } = Tabs;
-const {Option} = Select;
-const layout = {
-    labelCol: {
-      span: 8,
-    },
-    wrapperCol: {
-      span: 16,
-    },
-  };
+
  class Login extends React.Component{
     constructor(props) {
         super(props);

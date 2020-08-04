@@ -25,7 +25,7 @@ export default class bodyContent2 extends React.Component{
     render(){
         return (
             <div className="body-content2">
-                <a className="body-content2-top"><img src={require("../../img/body/bodyContent/body-content2-top.jpg")}/></a>
+                <a className="body-content2-top" href=""><img src={require("../../img/body/bodyContent/body-content2-top.jpg")}/></a>
                 {/*第二排*/}
                 <div className="body-content2-bottom content">
                     <div className="leftArea">
@@ -33,7 +33,7 @@ export default class bodyContent2 extends React.Component{
                             <div className="flex">
                                 <VideoCameraOutlined style={{fontSize:32,marginRight:6,color:"#48CFE5"}}/>
                                 <h4><a style={{fontSize:20}}>正在直播</a></h4>
-                                <a className="cursor-auto">当前共有33333个在线直播</a>
+                                <a className="cursor-auto" href="">当前共有33333个在线直播</a>
                             </div>
                             <div>
                                 <Button ><SyncOutlined className="spin"/>换一换</Button>
@@ -51,7 +51,7 @@ export default class bodyContent2 extends React.Component{
                         <h5 className="online-list">
                             <a>在线列表</a>
                         </h5>
-                        <a > <img style={{width:"100%"}} src={require("../../img/body/bodyContent/content1-pic.jpg")}/></a>
+                        <a href=""> <img style={{width:"100%"}} src={require("../../img/body/bodyContent/content1-pic.jpg")}/></a>
                     </div>
                 </div>
             </div>

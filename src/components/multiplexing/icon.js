@@ -24,16 +24,16 @@ export default class Icon extends React.Component{
     }
     changeStatus(t){
         let s =0;
-        if( t == 1 && (this.state.status == 1 || this.state.status == 2)){
+        if( t === 1 && (this.state.status === 1 || this.state.status === 2)){
             console.log("移出列表")
             s = 3;
-        }else if( t == 1 && (this.state.status == 0 || this.state.status == 3)){
+        }else if( t === 1 && (this.state.status === 0 || this.state.status === 3)){
             console.log("已加列表")
             s = 1;
-        }else if(t == 2 && (this.state.status == 1 || this.state.status == 2)){
+        }else if(t === 2 && (this.state.status === 1 || this.state.status === 2)){
             console.log("移出")
             s = 2;
-        }else if(t == 2 && (this.state.status == 3 || this.state.status == 0)){
+        }else if(t === 2 && (this.state.status === 3 || this.state.status === 0)){
             console.log("稍后再看")
             s = 0;
         }
@@ -48,7 +48,7 @@ export default class Icon extends React.Component{
             ?
             <Tooltip  overlayClassName="watch-later-tip" title={this.state.title[this.state.status]} arrowPointAtCenter={true} color="grey">
                 <i className={[this.state.type,
-                 this.state.status == 1 ?"watch-add": this.state.status == 2 ? "watch-add":null ]} onMouseEnter={()=>{this.changeStatus(2)}} onClick={()=>this.changeStatus(1)}>
+                 this.state.status === 1 ?"watch-add": this.state.status === 2 ? "watch-add":null ]} onMouseEnter={()=>{this.changeStatus(2)}} onClick={()=>this.changeStatus(1)}>
                     {this.getIcon()}
                 </i>
             </Tooltip>
