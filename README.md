@@ -7,5 +7,7 @@ react-antd 自学
 模拟实现B站首页展示效果
 目前完成头部模块导航
 
+函数组件+hooks 实现事件待办功能 /list路径
+
 npm install 
 npm run start
