@@ -1,11 +1,11 @@
 import React from 'react';
 import { Layout } from 'antd';
-import Login from "./user/login";
 import { BrowserRouter,Route,Switch } from 'react-router-dom';
-import Register from './user/user-register';
 import Body from "./contentArea/Body";
 import Head from "./headerArea/Header";
 import Foot from "./footerArea/Foot";
+import TodoLists from "./TodoList/TodoLists";
+
 const { Header, Footer, Content } = Layout;
 
 export default class App extends React.Component{
@@ -38,18 +38,19 @@ export default class App extends React.Component{
     return(
     <BrowserRouter>
       <Switch>
-      <Route path="/login" exact component={Login} />
-        <Route path="/">
+       <Route path="/" exact>
             <Header style={{height:"288px"}}><Head/></Header>
               <Layout >
                 <Content style={{background:"#fff"}}>
-                  <Route path="/" exact component={Body} />
-                  <Route path="/register" exact component={Register} />
-                </Content>
+                  <Route  component={Body} />
+                  </Content>
               </Layout>
             <Footer className="footer">
               <Foot />
             </Footer>
+        </Route>
+        <Route path="/list">
+            <TodoLists />
         </Route>
       </Switch>
     </BrowserRouter>

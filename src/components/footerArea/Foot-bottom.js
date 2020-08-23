@@ -1,7 +1,9 @@
 import React from"react";
-import "./Foot.css";
-//import { RedditSquareFilled } from "@ant-design/icons";
+import foot from "./Foot.css";
 
+import Hook from "../multiplexing/hooks";
+//import { RedditSquareFilled } from "@ant-design/icons";
+console.log(foot)
 export default class FootBottom extends React.Component{
     constructor(props){
         super(props);
@@ -40,13 +42,14 @@ export default class FootBottom extends React.Component{
     render(){
         
         return(
-            <div className="foot-bottom flex flex-start align-start">
+            <div className="foot-bottom  flex flex-start align-start">
                 <div className="foot-bottom-left" >
                     <img src={require("../../img/footer/partner.png")} />
                     <img src={require("../../img/footer/pic962110.png")} />
                     <a href=""><img src={this.state.changePic.type ? this.state.changePic.src1 : this.state.changePic.src2} />
                     </a>
                 </div>
+
                 <div className="foot-bottom-right">
                     {this.state.text.map((item,index)=>{
                         return (
